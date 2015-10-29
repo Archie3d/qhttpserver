@@ -21,6 +21,7 @@
 #include <QThreadPool>
 #include <QHostAddress>
 #include <QTcpServer>
+#include "HttpServerApi.h"
 
 class HttpThreadPool;
 class HttpClientHandler;
@@ -31,7 +32,7 @@ class HttpRequestRouter;
  * Handles incomming connections and dispatches them to
  * client handlers.
  */
-class HttpServer : public QTcpServer
+class HTTP_API HttpServer : public QTcpServer
 {
     Q_OBJECT
 public:
@@ -48,7 +49,7 @@ public:
     ~HttpServer();
 
     const QHostAddress& hostAddress() const { return m_hostAddress; }
-    quint16 port() const { m_port; }
+    quint16 port() const { return m_port; }
 
     HttpRequestRouter* requestRouter() const { return m_pRequestRouter; }
 

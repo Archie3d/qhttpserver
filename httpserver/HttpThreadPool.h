@@ -21,11 +21,12 @@
 #include <QList>
 #include <QQueue>
 #include <QThread>
+#include "HttpServerApi.h"
 
 /**
  * This class handles a collection of threads.
  */
-class HttpThreadPool : public QObject
+class HTTP_API HttpThreadPool : public QObject
 {
     Q_OBJECT
 public:

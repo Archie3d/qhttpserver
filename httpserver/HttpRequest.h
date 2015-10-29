@@ -22,9 +22,10 @@
 #include <QVariantMap>
 #include <QMultiMap>
 #include <QNetworkCookie>
+#include "HttpServerApi.h"
 #include "HttpContentType.h"
 
-class HttpRequest
+class HTTP_API HttpRequest
 {
 public:
 

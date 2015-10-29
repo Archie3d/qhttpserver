@@ -19,12 +19,13 @@
 #define HTTPCONTENTTYPE_H
 
 #include <QString>
+#include "HttpServerApi.h"
 
 /**
  * HTTP content type encoded
  * as type/media pair.
  */
-class HttpContentType
+class HTTP_API HttpContentType
 {
 public:
 

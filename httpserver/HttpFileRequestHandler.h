@@ -18,9 +18,10 @@
 #ifndef HTTPFILEREQUESTHANDLER_H
 #define HTTPFILEREQUESTHANDLER_H
 
+#include "HttpServerApi.h"
 #include "HttpRequestHandler.h"
 
-class HttpFileRequestHandler : public HttpRequestHandler
+class HTTP_API HttpFileRequestHandler : public HttpRequestHandler
 {
     Q_OBJECT
 public:

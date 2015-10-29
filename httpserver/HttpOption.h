@@ -20,11 +20,12 @@
 
 #include <QString>
 #include <QDateTime>
+#include "HttpServerApi.h"
 
 /**
  * This class holds known HTTP option names.
  */
-class HttpOption
+class HTTP_API HttpOption
 {
 public:
 

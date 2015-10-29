@@ -21,6 +21,10 @@
 #include "HttpRequestRouter.h"
 #include "HttpFileRequestHandler.h"
 
+/*
+ * Example of HttpServer usage
+ */
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);

@@ -23,10 +23,11 @@
 #include <QTcpSocket>
 #include <QNetworkCookie>
 #include <QPointer>
+#include "HttpServerApi.h"
 #include "HttpContentType.h"
 #include "IHttpClientHandler.h"
 
-class HttpResponse
+class HTTP_API HttpResponse
 {
 public:
 

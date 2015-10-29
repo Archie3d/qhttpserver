@@ -20,6 +20,7 @@
 #define HTTPCLIENTHANDLER_H
 
 #include <QObject>
+#include "HttpServerApi.h"
 #include "IHttpClientHandler.h"
 #include "HttpRequest.h"
 #include "HttpResponse.h"
@@ -27,7 +28,7 @@
 class QTcpSocket;
 class HttpRequestHandler;
 
-class HttpClientHandler : public QObject, public IHttpClientHandler
+class HTTP_API HttpClientHandler : public QObject, public IHttpClientHandler
 {
     Q_OBJECT
 public:

@@ -15,23 +15,37 @@
     Lesser General Public License for more details.
 */
 
-#ifndef IHTTPCLIENTHANDLER_H
-#define IHTTPCLIENTHANDLER_H
+#ifndef HTTPREQUESTHANDLER_H
+#define HTTPREQUESTHANDLER_H
+
+#include <QObject>
+#include "HttpServerApi.h"
+#include "HttpRequest.h"
+#include "HttpResponse.h"
 
 /**
- * Interface to HTTP client handler.
- * This interface is used as a 'call-back' for HTTP responses
- * to notify the client handler to proceed with response
- * finalization (e.g. sending it to remote client).
+ * Abstract handler of HTTP requests.
  */
-class IHttpClientHandler
+class HTTP_API HttpRequestHandler : public QObject
 {
+    Q_OBJECT
+
 public:
 
-    virtual void finalizeResponse() = 0;
+    explicit HttpRequestHandler(QObject *pParent = nullptr);
 
-    virtual ~IHttpClientHandler() {}
+    /**
+     * Handle HTTP request.
+     * @param request Incoming request.
+     * @param response Generated response.
+     */
+    virtual void handleRequest(const HttpRequest &request, HttpResponse &response) = 0;
+
+public slots:
+
+    void processRequest(const HttpRequest &request, HttpResponse &response);
+
 };
 
-#endif // IHTTPCLIENTHANDLER_H
+#endif // HTTPREQUESTHANDLER_H
 

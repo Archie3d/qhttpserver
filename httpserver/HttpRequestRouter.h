@@ -19,9 +19,10 @@
 #define HTTPREQUESTROUTER_H
 
 #include <QMutex>
+#include "HttpServerApi.h"
 #include "HttpRequestHandler.h"
 
-class HttpRequestRouter : public HttpRequestHandler
+class HTTP_API HttpRequestRouter : public HttpRequestHandler
 {
     Q_OBJECT
 public:

@@ -14,17 +14,17 @@
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #   Lesser General Public License for more details.
 
-QT       += core network
+TEMPLATE = lib
 
+QT       += core network
 QT       -= gui
 
-TARGET = HttpServer
-CONFIG   += console
-CONFIG   -= app_bundle
+CONFIG += dll
 
-TEMPLATE = app
+TARGET = httpserver
+DEFINES += HTTPSERVERLIB_BUILD
 
-SOURCES += main.cpp \
+SOURCES += \
     HttpServer.cpp \
     HttpClientHandler.cpp \
     HttpThreadPool.cpp \
@@ -37,6 +37,7 @@ SOURCES += main.cpp \
     HttpResponse.cpp
 
 HEADERS += \
+    HttpServerApi.h \
     HttpServer.h \
     HttpClientHandler.h \
     HttpThreadPool.h \
